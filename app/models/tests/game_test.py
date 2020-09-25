@@ -8,8 +8,8 @@ class TestGame(unittest.TestCase):
         self.player_1 = Player("Sebastion", "Rock")
         self.player_2 = Player("Barnaby", "Scissors")
 
-        self.game_1 = Game(self.player_1.choice, self.player_2.choice)
+        self.game_1 = Game(self.player_1, self.player_2)
 
     def test_game_has_expected_properties(self):
-        self.assertEqual("Rock", self.game_1.player_1_choice)
-        self.assertEqual("Scissors", self.game_1.player_2_choice)
+        self.assertEqual(self.player_1, self.game_1.player_1)
+        self.assertEqual(self.player_2, self.game_1.player_2)
