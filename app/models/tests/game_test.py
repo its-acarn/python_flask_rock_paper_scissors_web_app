@@ -31,6 +31,12 @@ class TestGame(unittest.TestCase):
         result = self.game_1.rock_paper_scissors_logic(self.player_scissors.choice, self.player_paper.choice)
         self.assertEqual("Player 1 wins", result)
 
+
     def test_rock_paper_scissors_logic___player_2_wins_with__scissors_v_rock(self):
         result = self.game_1.rock_paper_scissors_logic(self.player_scissors.choice, self.player_rock.choice)
+        self.assertEqual("Player 2 wins", result)
+
+
+    def test_rock_paper_scissors_logic___player_2_wins_with__rock_v_paper(self):
+        result = self.game_1.rock_paper_scissors_logic(self.player_rock.choice, self.player_paper.choice)
         self.assertEqual("Player 2 wins", result)
