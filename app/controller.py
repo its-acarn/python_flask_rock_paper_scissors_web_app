@@ -26,7 +26,7 @@ def result():
     player_2_choice = request.form.get('player_2_choice')
     player_2 = Player(player_2_name, player_2_choice)
 
-    new_game = Game(player_1, player_2)
-    result = new_game.rock_paper_scissors_logic(player_1.choice, player_2.choice)
+    new_game = Game()
+    result = new_game.rock_paper_scissors_logic(player_1, player_2)
     
     return render_template('result_page.html', result=result)
