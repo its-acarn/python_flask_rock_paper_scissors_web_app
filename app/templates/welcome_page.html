@@ -3,7 +3,12 @@
 {% block welcome %}
 
 <h1>Ready to play?</h1>
-<p></p>
+<form action="/play" method="POST">
+    <div>
+        <input type="submit" id="submit" value="PLAY!">
+    </div>
+</form>
+
 <section>
     <h2>How to play:</h2>
     <ul>

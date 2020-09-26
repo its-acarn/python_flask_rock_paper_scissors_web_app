@@ -4,8 +4,12 @@
 
 <form action="/result" method="POST">
     <div>
-        <label for="player_1">Player 1 choose:</label>
-        <select name="player_1_choice" id="player_choice" required>
+        <label for="player_1_name">Name:</label>
+        <input type="text" name="player_1_name" id="player_1_name" required>
+    </div>
+    <div>
+        <label for="player_1_choice"> {{ player_1_name }} Rock, paper or scissors?</label>
+        <select name="player_1_choice" id="player_1_choice" required>
             <option value="Choose wisely" disabled selected>Choose wisely</option>
             <option value="Rock">Rock</option>
             <option value="Paper">Paper</option>
@@ -13,8 +17,12 @@
         </select>
     </div>
     <div>
-        <label for="player_2">Player 2 choose:</label>
-        <select name="player_2_choice" id="player_choice" required>
+        <label for="player_2_name">Name:</label>
+        <input type="text" id="player_2_name" name="player_2_name" required>
+    </div>
+    <div>
+        <label for="player_2_choice">Rock, paper or scissors?</label>
+        <select name="player_2_choice" id="player_2_choice" required>
             <option value="Choose wisely" disabled selected>Choose wisely</option>
             <option value="Rock">Rock</option>
             <option value="Paper">Paper</option>

@@ -1,34 +1,32 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
 from app import app
+from app.models.src.player import Player
+from app.models.src.game import Game
 
 # app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 @app.route('/')
 def index():
-    return redirect(url_for('play'))
+    return redirect(url_for('welcome'))
 
 @app.route('/welcome')
 def welcome():
     return render_template('welcome_page.html')
 
-@app.route('/play')
+@app.route('/play', methods=['POST'])
 def play():
     return render_template('play_page.html')
 
-@app.route('/result', methods=['POST'])
+@app.route('/result', methods=['POST', 'GET'])
 def result():
+    player_1_name = request.form.get('player_1_name')
+    player_1_choice = request.form.get('player_1_choice')
+    player_1 = Player(player_1_name, player_1_choice)
+    player_2_name = request.form.get('player_2_name')
+    player_2_choice = request.form.get('player_2_choice')
+    player_2 = Player(player_2_name, player_2_choice)
 
-    print(request.form)
-    return "Done"
-    # return render_template('result_page.html')
-
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     error = None
-#     if request.method == 'POST':
-#         if request.form['username'] != 'admin' or request.form['password'] != 'secret':
-#             error = 'Invalid credentials'
-#         else:
-#             flash('You were successfully logged in')
-#             return redirect(url_for('index'))
-#     return render_template('login.html', error=error)
+    new_game = Game(player_1, player_2)
+    result = new_game.rock_paper_scissors_logic(player_1.choice, player_2.choice)
+    
+    return render_template('result_page.html', result=result)

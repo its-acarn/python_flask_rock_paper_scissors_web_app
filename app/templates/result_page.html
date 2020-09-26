@@ -2,8 +2,12 @@
 
 {% block result %}
 
-<h1>WINNER!</h1>
+<h1>{{ result }} is the WINNER!</h1>
 
-
+<form action="/play" method="POST">
+    <div>
+        <input type="submit" id="submit" value="Play again?">
+    </div>
+</form>
 
 {% endblock result %}
