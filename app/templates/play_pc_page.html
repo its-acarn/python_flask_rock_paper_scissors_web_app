@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 
-{% block play %}
+{% block play_pc %}
 
-<form action="/result" method="POST">
+<form action="/result-pc" method="POST">
     <div>
         <label for="player_1_name">Name:</label>
         <input type="text" name="player_1_name" id="player_1_name" required>
@@ -17,21 +17,8 @@
         </select>
     </div>
     <div>
-        <label for="player_2_name">Name:</label>
-        <input type="text" id="player_2_name" name="player_2_name" required>
-    </div>
-    <div>
-        <label for="player_2_choice">Rock, paper or scissors?</label>
-        <select name="player_2_choice" id="player_2_choice" required>
-            <option value="Choose wisely" disabled selected>Choose wisely</option>
-            <option value="Rock">Rock</option>
-            <option value="Paper">Paper</option>
-            <option value="Scissors">Scissors</option>
-        </select>
-    </div>
-    <div>
         <input type="submit" id="submit" value="PLAY!">
     </div>
 </form>
 
-{% endblock play %}
+{% endblock play_pc %}
