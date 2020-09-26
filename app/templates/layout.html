@@ -1,12 +1,26 @@
-<!doctype html>
-<title>My Application</title>
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<ul class=flashes>
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
-{% block body %}{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK, PAPER, SCISSORS!</title>
+</head>
+
+<body>
+    <header>
+        <h1>ROCK, PAPER, SCISSORS!</h1>
+    </header>
+
+    {% block welcome %}{% endblock welcome %}
+
+    {% block play %}{% endblock play %}
+
+    {% block result %}{% endblock result %}
+
+    <footer>
+        <h6>An ACARN Design.</h6>
+    </footer>
+</body>
+
+</html>
