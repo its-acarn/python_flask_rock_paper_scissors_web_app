@@ -45,14 +45,14 @@ class TestGame(unittest.TestCase):
 
     def test_two_player_rps___draw_result_with__rock_v_rock(self):
         result = self.new_game.two_player_rps(self.player_rock, self.player_rock)
-        self.assertEqual("It's a boring draw, try again.", result)
+        self.assertEqual("It's a boring draw, play again.", result)
 
 
     def test_two_player_rps___draw_result_with__paper_v_paper(self):
         result = self.new_game.two_player_rps(self.player_paper, self.player_paper)
-        self.assertEqual("It's a boring draw, try again.", result)
+        self.assertEqual("It's a boring draw, play again.", result)
 
     
     def test_two_player_rps___draw_result_with__scissors_v_scissors(self):
         result = self.new_game.two_player_rps(self.player_scissors, self.player_scissors)
-        self.assertEqual("It's a boring draw, try again.", result)
+        self.assertEqual("It's a boring draw, play again.", result)

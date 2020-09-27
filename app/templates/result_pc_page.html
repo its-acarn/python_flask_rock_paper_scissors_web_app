@@ -1,21 +1,26 @@
 {% extends "layout.html" %}
 
 {% block result_pc %}
-
-<h4>{{ player_1_name.upper() }} chose {{ player_1_choice }}</h4>
-<h4>COMPUTER chose {{ computer_choice }}</h4>
-<h4>so</h4>
-<h1>{{ result_pc }}</h1>
-
-<form action="/play-pc" method="POST">
-    <div>
-        <input type="submit" id="submit" value="Play again?">
+<section class="result-container">
+    <div class="result-summary">
+        <h4>{{ player_1_name.upper() }} chose {{ player_1_choice }}</h4>
+        <h4>COMPUTER chose {{ computer_choice }}</h4>
+        <h4>so</h4>
+        <h1>{{ result_pc }}</h1>
     </div>
-</form>
-<form action="/welcome" method="POST">
-    <div>
-        <input type="submit" id="submit" value="Home">
+    <div class="result-buttons">
+        <form action="/play-pc" method="POST">
+            <div class="result-play-again-button">
+                <input type="submit" id="submit" value="Play again?">
+            </div>
+        </form>
+        <form action="/welcome" method="POST">
+            <div class="result-home-button">
+                <input type="submit" id="submit" value="Home">
+            </div>
+        </form>
     </div>
-</form>
+</section>
+
 
 {% endblock result_pc %}

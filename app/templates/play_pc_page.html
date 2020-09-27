@@ -1,24 +1,26 @@
 {% extends "layout.html" %}
 
 {% block play_pc %}
-
-<form action="/result-pc" method="POST">
-    <div>
-        <label for="player_1_name">Name:</label>
-        <input type="text" name="player_1_name" id="player_1_name" required>
-    </div>
-    <div>
-        <label for="player_1_choice">Rock, paper or scissors?</label>
-        <select name="player_1_choice" id="player_1_choice" required>
-            <option value="Choose wisely" disabled>Choose wisely</option>
-            <option value="Rock">Rock</option>
-            <option value="Paper">Paper</option>
-            <option value="Scissors">Scissors</option>
-        </select>
-    </div>
-    <div>
-        <input type="submit" id="submit" value="PLAY!">
-    </div>
-</form>
-
+<section class="play-container">
+    <form action="/result-pc" method="POST">
+        <div class="player-1">
+            <div>
+                <label for="player_1_name">Name:</label>
+                <input type="text" name="player_1_name" id="player_1_name" required>
+            </div>
+            <div>
+                <label for="player_1_choice">Rock, paper or scissors?<br></label>
+                <select name="player_1_choice" id="player_1_choice" required>
+                    <option value="Choose wisely" disabled>Choose wisely</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <input type="submit" id="submit" value="PLAY!">
+        </div>
+    </form>
+</section>
 {% endblock play_pc %}

@@ -2,8 +2,8 @@
 
 {% block result %}
 
-<section>
-    <div>
+<section class="result-container">
+    <div class="result-summary">
         <h4>{{ player_1_name.upper() }} chose {{ player_1_choice}}</h4>
         <h4>{{ player_2_name.upper() }} chose {{ player_2_choice}}</h4>
         <h4>so</h4>
@@ -11,14 +11,14 @@
     <div>
         <h1>{{ result }}</h1>
     </div>
-    <div>
+    <div class="result-buttons">
         <form action="/play" method="POST">
-            <div>
+            <div class="result-play-again-button">
                 <input type="submit" id="submit" value="Play again?">
             </div>
         </form>
         <form action="/welcome" method="POST">
-            <div>
+            <div class="result-home-button">
                 <input type="submit" id="submit" value="Home">
             </div>
         </form>

@@ -66,8 +66,7 @@ footer {
 
 .welcome-container {
 	display: flex;
-	flex-flow: column;
-	justify-content: center;
+	flex-flow: column wrap;
 }
 
 .ready {
@@ -76,13 +75,16 @@ footer {
 	font-size: 20px;
 }
 
-.play-a-friend {
-	text-align: center;
+.ready-to-play-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
-.play-pc {
+.play-a-friend-button,
+.play-pc-button {
 	text-align: center;
-	padding: 10px 0;
+	padding: 2% 10px;
 }
 
 .how-to-play {
@@ -118,3 +120,47 @@ footer {
 }
 
 /* styles affecting result_page.html */
+
+.result-container {
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
+}
+
+.result-container h1 {
+	font-size: 50px;
+	font-weight: 900;
+	font-style: oblique;
+	padding: 3% 0;
+}
+
+.result-summary {
+	padding: 5% 0 10px 0;
+}
+
+.result-buttons {
+	padding: 10% 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.result-play-again-button {
+	padding-right: 10px;
+}
+
+/* styles affecting play_page.html */
+
+.play-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.player-1 {
+	padding: 5% 0 3% 0;
+}
+
+.player-2 {
+	padding: 0 0 3% 0;
+}
