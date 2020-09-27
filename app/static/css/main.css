@@ -5,7 +5,7 @@ body {
 	max-height: 100vh;
 	width: 100vw;
 	margin: 0;
-	/* background-color: blanchedalmond; */
+	font-family: "Raleway", sans-serif;
 }
 
 h1,
@@ -21,7 +21,6 @@ h6 {
 
 header {
 	display: flex;
-	/* border-bottom: 1px solid black; */
 	height: 20%;
 	max-height: 200px;
 	align-items: center;
@@ -73,19 +72,21 @@ footer {
 
 .ready {
 	text-align: center;
-	padding: 2% 0;
-	font-size: 32px;
+	padding: 5% 0 10px 0;
+	font-size: 20px;
 }
 
 .play-a-friend {
 	text-align: center;
-	padding: 2% 0;
-	/* font-size: 32px; */
 }
 
 .play-pc {
 	text-align: center;
-	padding: 2% 0;
+	padding: 10px 0;
+}
+
+.how-to-play {
+	padding: 8% 0 0 0;
 }
 
 .how-to-play h2,
@@ -94,5 +95,26 @@ footer {
 }
 
 .how-to-play ul {
-	padding: 0 33%;
+	display: table;
+	margin: 5px auto;
 }
+
+#submit {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 240, 0, 1) 0%,
+		rgba(244, 147, 1, 1) 50%,
+		rgba(255, 7, 0, 1) 100%
+	);
+	color: white;
+	border-style: outset;
+	border-color: black;
+	height: 50px;
+	width: 200px;
+	font-size: 15px;
+	font-family: "Raleway", sans-serif;
+	font-weight: 800;
+	text-shadow: none;
+}
+
+/* styles affecting result_page.html */

@@ -2,21 +2,27 @@
 
 {% block result %}
 
-
-<h4>{{ player_1_name.upper() }} chose {{ player_1_choice}}</h4>
-<h4>{{ player_2_name.upper() }} chose {{ player_2_choice}}</h4>
-<h4>so</h4>
-<h1>{{ result }}</h1>
-
-<form action="/play" method="POST">
+<section>
     <div>
-        <input type="submit" id="submit" value="Play again?">
+        <h4>{{ player_1_name.upper() }} chose {{ player_1_choice}}</h4>
+        <h4>{{ player_2_name.upper() }} chose {{ player_2_choice}}</h4>
+        <h4>so</h4>
     </div>
-</form>
-<form action="/welcome" method="POST">
     <div>
-        <input type="submit" id="submit" value="Home">
+        <h1>{{ result }}</h1>
     </div>
-</form>
+    <div>
+        <form action="/play" method="POST">
+            <div>
+                <input type="submit" id="submit" value="Play again?">
+            </div>
+        </form>
+        <form action="/welcome" method="POST">
+            <div>
+                <input type="submit" id="submit" value="Home">
+            </div>
+        </form>
+    </div>
+</section>
 
 {% endblock result %}
