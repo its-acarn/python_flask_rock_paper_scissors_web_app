@@ -58,3 +58,15 @@ def result_pc():
     result = new_game.two_player_rps(player_1, player_2)
     
     return render_template('result_pc_page.html', player_1_name=player_1_name, player_1_choice=player_1_choice, computer_choice=player_2_choice, result_pc=result)
+
+@app.route('/<player_1_choice>/<player_2_choice>', methods=['POST', 'GET'])
+def url_play(player_1_choice, player_2_choice):
+    player_1_name = 'Player 1'
+    player_2_name = 'Player 2'
+    player_1 = Player(player_1_name, player_1_choice.capitalize())
+    player_2 = Player(player_2_name, player_2_choice.capitalize())
+    new_game = Game()
+    result = new_game.two_player_rps(player_1, player_2)
+    
+    return render_template('result_page.html', player_1_name=player_1_name, player_1_choice=player_1_choice, player_2_name=player_2_name, player_2_choice=player_2_choice, result=result)
+
