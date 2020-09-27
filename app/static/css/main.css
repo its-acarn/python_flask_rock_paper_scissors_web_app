@@ -1,9 +1,11 @@
+/* styles affecting all page elements */
+
 body {
 	height: 100vh;
+	max-height: 100vh;
 	width: 100vw;
 	margin: 0;
-	background-color: blanchedalmond;
-	font-family: "Raleway", sans-serif;
+	/* background-color: blanchedalmond; */
 }
 
 h1,
@@ -15,38 +17,82 @@ h6 {
 	margin: 0;
 }
 
+/* styles affecting header and footer */
+
 header {
 	display: flex;
-	padding: 1em;
-	border-bottom: 1px solid black;
+	/* border-bottom: 1px solid black; */
+	height: 20%;
+	max-height: 200px;
+	align-items: center;
+	justify-content: center;
+	font-family: "Major Mono Display", monospace;
 }
 
 footer {
 	display: flex;
-	padding: 1em;
-	border-top: 1px solid black;
+	position: absolute;
+	width: 100vw;
+	bottom: 0;
 	margin: 0;
+	height: 10%;
+	max-height: 75px;
+	align-items: center;
+	justify-content: flex-end;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 240, 0, 1) 0%,
+		rgba(244, 147, 1, 1) 50%,
+		rgba(255, 7, 0, 1) 100%
+	);
 }
 
-form {
+#acarn {
+	font-family: "Righteous", cursive;
+	font-size: 25px;
+	color: white;
+}
+
+.footer-logo {
+	color: white;
+	padding-right: 20px;
+}
+
+/* styles affecting layout.html */
+.layout {
+	height: 60%;
+}
+
+/* styles affecting welcome_page.html */
+
+.welcome-container {
 	display: flex;
-	flex-flow: row wrap;
-	color: red;
-}
-
-footer {
-	color: black;
+	flex-flow: column;
 	justify-content: center;
 }
 
-.how-to-play h2 {
+.ready {
+	text-align: center;
+	padding: 2% 0;
+	font-size: 32px;
+}
+
+.play-a-friend {
+	text-align: center;
+	padding: 2% 0;
+	/* font-size: 32px; */
+}
+
+.play-pc {
+	text-align: center;
+	padding: 2% 0;
+}
+
+.how-to-play h2,
+.how-to-play h3 {
 	text-align: center;
 }
 
 .how-to-play ul {
 	padding: 0 33%;
-}
-
-.how-to-play h3 {
-	text-align: center;
 }

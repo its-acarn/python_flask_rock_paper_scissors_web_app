@@ -5,27 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href='{{ url_for('static', filename='css/main.css') }}'>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Major+Mono+Display&family=Righteous&display=swap"
+        rel="stylesheet">
     <title>ROCK 🚀 PAPER 📰 SCISSORS ✂ 😁</title>
 </head>
 
 <body>
     <header>
-        <h1>ROCK 🚀 PAPER 📰 SCISSORS ✂ 😁</h1>
+        <h1>[ ROCK 🚀 ] <br> { PAPER 📰 } <br> ( SCISSORS ✂ ) </h1>
     </header>
+    <section class="layout">
 
-    {% block welcome %}{% endblock welcome %}
+        {% block welcome %}{% endblock welcome %}
 
-    {% block play %}{% endblock play %}
+        {% block play %}{% endblock play %}
 
-    {% block play_pc %}{% endblock play_pc %}
+        {% block play_pc %}{% endblock play_pc %}
 
-    {% block result %}{% endblock result %}
+        {% block result %}{% endblock result %}
 
-    {% block result_pc %}{% endblock result_pc %}
+        {% block result_pc %}{% endblock result_pc %}
 
+    </section>
     <footer>
-        <h6 class="footer-logo">An ACARN Design.</h6>
+        <h6 class="footer-logo">made by <span id="acarn">acarn.</span></h6>
     </footer>
 </body>
 
